@@ -1,0 +1,12 @@
+[package]
+name = "ardbms"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "ardbms"
+path = "src/lib.rs"
+
+[[bin]]
+name = "ardbms"
+path = "src/main.rs"

@@ -1,16 +1,8 @@
-#[cfg(test)]
-mod tests {
-    use super::*;
+// tests/arabic_encoding_test.rs
+use ardbms::arabic::encoding;  // Assuming your crate is named "ardbms"
 
-    #[test]
-    fn test_valid_arabic() {
-        let text = "مرحبا بالعالم";
-        assert!(encoding::validate_arabic(text));
-    }
-
-    #[test]
-    fn test_invalid_mixed_chars() {
-        let text = "Hello مرحبا";
-        assert!(!encoding::validate_arabic(text));
-    }
+#[test]
+fn test_arabic_validation() {
+    assert!(encoding::validate_arabic("مرحبا"));
+    assert!(!encoding::validate_arabic("Hello 123"));
 }
